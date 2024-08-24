@@ -1,6 +1,6 @@
 <?php
 
-class DryExampleBadUse {
+class DryExampleGoodUse {
     private string $role = 'admin';
     private bool $logged = true;
 
@@ -28,7 +28,7 @@ class DryExampleBadUse {
         if (!$this->isLogged() && !$this->isAdmin()) {
             throw new Exception('User is not logged');
         }
-        
+
         $this->messageToPost = $message;
     }
 }
